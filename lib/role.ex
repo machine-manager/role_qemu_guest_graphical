@@ -3,7 +3,6 @@ defmodule RoleKvmGuest do
 		%{
 			desired_packages: [
 				"xserver-xorg-video-qxl",
-				"qemu-guest-agent",
 				"spice-vdagent",
 			],
 			implied_roles: [RoleCustomPackages],
