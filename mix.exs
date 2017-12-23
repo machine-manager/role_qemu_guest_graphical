@@ -1,9 +1,9 @@
-defmodule RoleKvmGuest.Mixfile do
+defmodule RoleQemuGuest.Mixfile do
 	use Mix.Project
 
 	def project do
 		[
-			app:             :role_kvm_guest,
+			app:             :role_qemu_guest,
 			version:         "0.1.0",
 			elixir:          ">= 1.4.0",
 			build_embedded:  Mix.env == :prod,
@@ -14,8 +14,7 @@ defmodule RoleKvmGuest.Mixfile do
 
 	defp deps do
 		[
-			{:converge,             ">= 0.1.0"},
-			{:role_custom_packages, ">= 0.1.0"},
+			{:converge, ">= 0.1.0"},
 		]
 	end
 end
