@@ -1,10 +1,12 @@
-defmodule RoleQemuGuest do
+defmodule RoleQemuGuestGraphical do
 	def role(_tags \\ []) do
 		%{
 			desired_packages: [
-				# Necessary for the host to be able to shut down the guest (without e.g. ssh)
-				"qemu-guest-agent",
+				"xserver-xorg-video-qxl",
+				# For guest display resizing and clipboard
+				"spice-vdagent",
 			],
+			implied_roles: [RoleQemuGuest],
 		}
 	end
 end
